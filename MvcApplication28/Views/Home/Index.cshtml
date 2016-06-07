@@ -1,0 +1,63 @@
+﻿@using Ajax.PeopleData
+@model MvcApplication28.Models.IndexViewModel
+
+<div class="row">
+    <div class="col-md-offset-2 col-md-3">
+        <button class="btn btn-primary btn-block" id="new-person">New</button>
+    </div>
+</div>
+
+<div class="row" style="margin-top: 20px;">
+    <table class="table table-hover table-striped table-bordered">
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Age</th>
+            <th>Actions</th>
+        </tr>
+
+        @foreach (Person person in Model.People)
+        {
+            <tr>
+                <td>@person.FirstName</td>
+                <td>@person.LastName</td>
+                <td>@person.Age</td>
+                <td>
+                    <button class="btn btn-warning edit" data-person-id="@person.Id">Edit</button>
+                    <button class="btn btn-danger delete" data-person-id="@person.Id">Delete</button>
+                </td>
+            </tr>
+        }
+    </table>
+</div>
+
+<div class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Person Modal</h4>
+            </div>
+            <div class="modal-body">
+                <input type="text" id="first-name" placeholder="First Name" class="form-control"/>
+                <br/><br/>
+                <input type="text" id="last-name" placeholder="Last Name" class="form-control" />
+                <br/><br/>
+                <input type="text" id="age" placeholder="Age" class="form-control" />
+                <br/><br/>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button id="save-person" data-loading-text="Saving...." class="btn btn-primary">Add</button>
+                <button id="update-person" data-loading-text="Updating...." class="btn btn-primary">Update</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div id="error"></div>
+
+@section scripts
+{
+    <script src="~/Scripts/index.js"></script>
+}

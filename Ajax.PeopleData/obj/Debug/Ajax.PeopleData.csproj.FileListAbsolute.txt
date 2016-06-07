@@ -1,0 +1,5 @@
+c:\users\alexfriedman\documents\visual studio 2013\Projects\MvcApplication28\Ajax.PeopleData\bin\Debug\Ajax.PeopleData.dll
+c:\users\alexfriedman\documents\visual studio 2013\Projects\MvcApplication28\Ajax.PeopleData\bin\Debug\Ajax.PeopleData.pdb
+c:\users\alexfriedman\documents\visual studio 2013\Projects\MvcApplication28\Ajax.PeopleData\obj\Debug\Ajax.PeopleData.csprojResolveAssemblyReference.cache
+c:\users\alexfriedman\documents\visual studio 2013\Projects\MvcApplication28\Ajax.PeopleData\obj\Debug\Ajax.PeopleData.dll
+c:\users\alexfriedman\documents\visual studio 2013\Projects\MvcApplication28\Ajax.PeopleData\obj\Debug\Ajax.PeopleData.pdb
